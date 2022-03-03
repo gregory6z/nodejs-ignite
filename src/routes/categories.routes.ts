@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import { Router } from "express";
 
-import { CategoriesRepository } from "../repositories/CategoriesRepositories";
+import { CategoriesRepository } from "../modules/cars/repositories/CategoriesRepositories";
 import { CreateCategoryService } from "../services/CreateCategoryService";
 
 const categoriesRoutes = Router();
