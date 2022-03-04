@@ -1,4 +1,4 @@
-import { ICategoriesRepository } from "../modules/cars/repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
   name: string;
@@ -11,7 +11,7 @@ interface IRequest {
  * [] Retornar algo
  */
 
-export class CreateCategoryService {
+export class CreateCategoryUseCase {
   constructor(private categoriesRepository: ICategoriesRepository) {}
 
   execute({ description, name }: IRequest): void {
