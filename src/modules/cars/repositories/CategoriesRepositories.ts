@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
+
 import { Category } from "../model/Category";
 import { ICategoriesRepository, ICreteCategoryDTO } from "./ICategoriesRepository";
 
