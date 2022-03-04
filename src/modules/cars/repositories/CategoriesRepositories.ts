@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
@@ -5,13 +6,21 @@
 import { Category } from "../model/Category";
 import { ICategoriesRepository, ICreteCategoryDTO } from "./ICategoriesRepository";
 
-
-
 class CategoriesRepository implements ICategoriesRepository{
   private categories: Category[];
+  
+  
+  private static INSTANCE : CategoriesRepository
 
-  constructor() {
+  private constructor() {
     this.categories = [];
+  }
+
+  public static getInstance(): CategoriesRepository{
+    if(!CategoriesRepository.INSTANCE){
+      CategoriesRepository.INSTANCE = new CategoriesRepository()
+    }
+    return CategoriesRepository.INSTANCE
   }
 
   create({ description, name }: ICreteCategoryDTO): void {
