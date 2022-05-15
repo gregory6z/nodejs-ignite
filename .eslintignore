@@ -1,3 +1,4 @@
-/*.js
-node_modules
+# .estlintignore file
+.next
 dist
+node_modules/

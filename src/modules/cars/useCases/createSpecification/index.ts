@@ -5,9 +5,9 @@ import { CreateSpecificationUseCase } from "./CreateSpecificationUseCase";
 const specificationsRepository = new SpecificationsRepository();
 
 const createSpecificationUseCase = new CreateSpecificationUseCase(
-  specificationsRepository
+  specificationsRepository,
 );
 
 export const createSpecificationController = new CreateSpecificationController(
-  createSpecificationUseCase
+  createSpecificationUseCase,
 );
